@@ -3,6 +3,7 @@ import Layout from '@/components/layout/Layout';
 import SectionTitle from '@/components/ui/SectionTitle';
 import GoldDivider from '@/components/ui/GoldDivider';
 import { ArrowRight, Check, Building2, Hotel, HardHat, Handshake, Home } from 'lucide-react';
+import chairmanImage from '@/assets/chairman.png';
 
 const Index = () => {
   const differentiators = [
@@ -168,6 +169,52 @@ const Index = () => {
               View Our Companies
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Section */}
+      <section className="py-24 lg:py-32 bg-background">
+        <div className="container mx-auto px-6 lg:px-8">
+          <SectionTitle
+            subtitle="Leadership"
+            title="Visionary at the Helm"
+          />
+          
+          <div className="mt-16 max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Image */}
+              <div className="animate-fade-up">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-accent/10 -z-10" />
+                  <img
+                    src={chairmanImage}
+                    alt="Abdul Rahman Auf - Chairman & CEO of ARA Group"
+                    className="w-full aspect-[4/5] object-cover object-top shadow-elegant"
+                  />
+                </div>
+              </div>
+              
+              {/* Content */}
+              <div className="animate-fade-up animate-delay-200">
+                <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
+                  Chairman & CEO
+                </span>
+                <h3 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
+                  Abdul Rahman Auf
+                </h3>
+                <div className="w-16 h-0.5 bg-accent mb-8" />
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Founder and leader of ARA Group, driving the company with a clear vision 
+                  of independent growth, ethical responsibility, and global expansion.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Under his leadership, ARA Group has grown into a respected international 
+                  conglomerate, maintaining complete ownership and control while expanding 
+                  across multiple sectors and regions.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
