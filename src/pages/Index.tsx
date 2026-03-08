@@ -2,159 +2,89 @@ import { Link } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import SectionTitle from '@/components/ui/SectionTitle';
 import GoldDivider from '@/components/ui/GoldDivider';
-import { ArrowRight, Check, Building2, Hotel, HardHat, Handshake, Home } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import chairmanImage from '@/assets/chairman.png';
 
 const Index = () => {
-  const differentiators = [
-    'No External Investors',
-    '100% ARA Group Capital',
-    'Halal & Ethical Business Model',
-    'Long-Term Vision',
-    'International Operations',
-  ];
-
   const businessAreas = [
-    { icon: Handshake, title: 'Halal Business Investments', description: 'Strategic investments in ethical, shariah-compliant ventures' },
-    { icon: Hotel, title: 'Modern Hotel Development', description: 'World-class hospitality projects across multiple regions' },
-    { icon: HardHat, title: 'Construction & Infrastructure', description: 'Building foundations for sustainable development' },
-    { icon: Building2, title: 'Trading & Contracting', description: 'Comprehensive trading and contracting services' },
-    { icon: Home, title: 'Real Estate & Industrial Recycling', description: 'Property development and sustainable manufacturing' },
+    { title: 'Halal Business Investments', description: 'Strategic investments in ethical, shariah-compliant ventures across global markets.' },
+    { title: 'Hotel Development', description: 'World-class hospitality projects designed for lasting excellence.' },
+    { title: 'Construction & Infrastructure', description: 'Building foundations for sustainable, large-scale development.' },
+    { title: 'Trading & Contracting', description: 'Comprehensive services for construction and infrastructure sectors.' },
+    { title: 'Real Estate', description: 'Property development focused on long-term value creation.' },
+    { title: 'Industrial Recycling', description: 'Sustainable manufacturing supporting environmental responsibility.' },
   ];
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-cream-gradient">
-        {/* Subtle Pattern Background */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-        
+      {/* Hero */}
+      <section className="relative min-h-[100vh] flex items-center justify-center">
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block text-xs font-medium tracking-[0.3em] uppercase text-accent mb-8 animate-fade-up">
-              Self-Funded • Ethical • Global
-            </span>
-            
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-foreground mb-8 leading-tight animate-fade-up animate-delay-100">
-              ARA Group of Companies
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground font-light mb-6 animate-fade-up animate-delay-200">
-              Building the Future with Our Own Vision & Capital
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[11px] tracking-[0.4em] uppercase text-muted-foreground mb-10 animate-fade-up">
+              Self-Funded · Ethical · Global
             </p>
             
-            <GoldDivider className="my-10 animate-fade-up animate-delay-300" />
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-foreground leading-[1.15] animate-fade-up animate-delay-100">
+              ARA Group<br />of Companies
+            </h1>
             
-            <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-muted-foreground animate-fade-up animate-delay-400">
-              <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                100% Self-Funded
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                Halal Businesses
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                Global Development
-              </span>
-            </div>
+            <GoldDivider className="my-10 animate-fade-up animate-delay-200" />
             
-            <div className="mt-12 animate-fade-up animate-delay-500">
+            <p className="text-base text-muted-foreground font-light leading-relaxed max-w-md mx-auto animate-fade-up animate-delay-300">
+              Building the future with our own vision and capital.
+            </p>
+            
+            <div className="mt-14 animate-fade-up animate-delay-400">
               <Link
                 to="/about"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-charcoal-light transition-all duration-300 group"
+                className="inline-flex items-center gap-3 text-[13px] tracking-[0.1em] uppercase text-foreground border-b border-foreground pb-1 hover:border-accent hover:text-accent transition-colors duration-300 group"
               >
                 Discover Our Story
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animate-delay-600">
-          <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center">
-            <div className="w-1 h-2 bg-accent rounded-full mt-2 animate-bounce" />
-          </div>
-        </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-24 lg:py-32 bg-background">
+      {/* About */}
+      <section className="py-28 lg:py-36 border-t border-border">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <SectionTitle
-              subtitle="About ARA Group"
-              title="A Legacy of Independent Growth"
-            />
+          <div className="max-w-2xl mx-auto text-center">
+            <SectionTitle subtitle="About" title="A Legacy of Independent Growth" />
             
-            <div className="mt-12 space-y-6 text-center">
-              <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up animate-delay-300">
+            <div className="mt-10 space-y-5">
+              <p className="text-base text-muted-foreground leading-[1.8] animate-fade-up animate-delay-300">
                 ARA Group of Companies is a privately owned, self-funded business group. 
-                We invest exclusively using ARA Group's own capital and do not accept investments, 
-                partnerships, or funding from external parties.
+                We invest exclusively using ARA Group's own capital — no external investors, 
+                no partnerships, no outside funding.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up animate-delay-400">
-                Our focus is on halal, ethical, and sustainable businesses, with strong operations 
-                in Qatar and Saudi Arabia, United Arab Emirates and upcoming developments in India.
+              <p className="text-base text-muted-foreground leading-[1.8] animate-fade-up animate-delay-400">
+                Our focus: halal, ethical, and sustainable businesses with operations 
+                in Qatar, Saudi Arabia, UAE, and upcoming developments in India.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What Makes Us Different */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      {/* Business Areas */}
+      <section className="py-28 lg:py-36 bg-secondary">
         <div className="container mx-auto px-6 lg:px-8">
-          <SectionTitle
-            subtitle="Our Distinction"
-            title="What Makes Us Different"
-          />
+          <SectionTitle subtitle="Portfolio" title="Core Business Areas" />
           
-          <div className="mt-16 max-w-2xl mx-auto">
-            <div className="grid gap-4">
-              {differentiators.map((item, index) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-4 p-5 bg-background rounded shadow-elegant hover-lift animate-fade-up"
-                  style={{ animationDelay: `${(index + 3) * 0.1}s` }}
-                >
-                  <div className="w-8 h-8 bg-accent/10 rounded flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-accent" />
-                  </div>
-                  <span className="text-foreground font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Business Areas */}
-      <section className="py-24 lg:py-32 bg-background">
-        <div className="container mx-auto px-6 lg:px-8">
-          <SectionTitle
-            subtitle="Our Portfolio"
-            title="Core Business Areas"
-          />
-          
-          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
             {businessAreas.map((area, index) => (
               <div
                 key={area.title}
-                className="group p-8 bg-card border border-border/50 hover:border-accent/30 hover:shadow-elegant transition-all duration-500 animate-fade-up"
-                style={{ animationDelay: `${(index + 3) * 0.1}s` }}
+                className="bg-secondary p-10 animate-fade-up"
+                style={{ animationDelay: `${(index + 2) * 0.08}s` }}
               >
-                <div className="w-12 h-12 bg-accent/10 rounded flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                  <area.icon className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
+                <h3 className="font-serif text-lg font-normal text-foreground mb-3">
                   {area.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {area.description}
                 </p>
               </div>
@@ -164,54 +94,44 @@ const Index = () => {
           <div className="mt-16 text-center animate-fade-up animate-delay-600">
             <Link
               to="/companies"
-              className="inline-flex items-center gap-3 px-8 py-4 border border-primary text-primary text-sm font-medium tracking-wide hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+              className="inline-flex items-center gap-3 text-[13px] tracking-[0.1em] uppercase text-foreground border-b border-foreground pb-1 hover:border-accent hover:text-accent transition-colors duration-300 group"
             >
               View Our Companies
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Leadership Section */}
-      <section className="py-24 lg:py-32 bg-background">
+      {/* Chairman */}
+      <section className="py-28 lg:py-36">
         <div className="container mx-auto px-6 lg:px-8">
-          <SectionTitle
-            subtitle="Leadership"
-            title="Visionary at the Helm"
-          />
-          
-          <div className="mt-16 max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Image */}
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               <div className="animate-fade-up">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-accent/10 -z-10" />
-                  <img
-                    src={chairmanImage}
-                    alt="Abdul Rahman Auf - Chairman & CEO of ARA Group"
-                    className="w-full aspect-[4/5] object-cover object-top shadow-elegant"
-                  />
-                </div>
+                <img
+                  src={chairmanImage}
+                  alt="Abdul Rahman Auf — Chairman & CEO of ARA Group"
+                  className="w-full aspect-[3/4] object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                />
               </div>
               
-              {/* Content */}
               <div className="animate-fade-up animate-delay-200">
-                <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
+                <span className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground">
                   Chairman & CEO
                 </span>
-                <h3 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6">
+                <h3 className="font-serif text-3xl md:text-4xl font-normal text-foreground mt-4 mb-8">
                   Abdul Rahman Auf
                 </h3>
-                <div className="w-16 h-0.5 bg-accent mb-8" />
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <div className="w-8 h-px bg-accent mb-8" />
+                <p className="text-base text-muted-foreground leading-[1.8] mb-5">
                   Founder and leader of ARA Group, driving the company with a clear vision 
                   of independent growth, ethical responsibility, and global expansion.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-[1.8]">
                   Under his leadership, ARA Group has grown into a respected international 
-                  conglomerate, maintaining complete ownership and control while expanding 
-                  across multiple sectors and regions.
+                  conglomerate — maintaining complete ownership while expanding across 
+                  multiple sectors and regions.
                 </p>
               </div>
             </div>
@@ -219,26 +139,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 lg:py-32 bg-primary text-primary-foreground">
+      {/* CTA */}
+      <section className="py-28 lg:py-36 bg-foreground text-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-accent mb-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-[11px] tracking-[0.25em] uppercase text-background/50 mb-6">
               Global Presence
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-8">
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 leading-tight">
               Operating Across Borders
             </h2>
-            <p className="text-lg text-primary-foreground/70 mb-10">
-              With headquarters in Qatar and operations spanning Saudi Arabia, 
+            <p className="text-base text-background/60 mb-12 leading-[1.8]">
+              Headquarters in Qatar with operations spanning Saudi Arabia, 
               UAE, and upcoming developments in India.
             </p>
             <Link
               to="/projects"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground text-sm font-medium tracking-wide hover:bg-gold-light transition-all duration-300 group"
+              className="inline-flex items-center gap-3 text-[13px] tracking-[0.1em] uppercase text-background border-b border-background/40 pb-1 hover:border-accent hover:text-accent transition-colors duration-300 group"
             >
               Explore Our Projects
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
