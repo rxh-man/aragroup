@@ -112,7 +112,7 @@ const Index = () => {
                 <img
                   src={chairmanImage}
                   alt="Abdul Rahman Auf — Chairman & CEO of ARA Group"
-                  className="w-full aspect-[3/4] object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full aspect-[3/4] object-cover object-top"
                 />
               </div>
               

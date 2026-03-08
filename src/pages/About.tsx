@@ -94,7 +94,7 @@ const About = () => {
                 <img
                   src={chairmanImage}
                   alt="Abdul Rahman Auf — Chairman & CEO"
-                  className="w-full aspect-[3/4] object-cover object-top grayscale"
+                  className="w-full aspect-[3/4] object-cover object-top"
                 />
               </div>
               <div className="animate-fade-up animate-delay-200">
