@@ -1,17 +1,9 @@
 import Layout from '@/components/layout/Layout';
 import SectionTitle from '@/components/ui/SectionTitle';
 import GoldDivider from '@/components/ui/GoldDivider';
-import { Shield, Heart, Award, Leaf, Users } from 'lucide-react';
+import chairmanImage from '@/assets/chairman.png';
 
 const About = () => {
-  const values = [
-    { icon: Shield, title: 'Independence', description: 'Full ownership and control of all operations' },
-    { icon: Heart, title: 'Integrity', description: 'Ethical practices in every business decision' },
-    { icon: Award, title: 'Quality', description: 'Excellence in all our developments and services' },
-    { icon: Leaf, title: 'Sustainability', description: 'Long-term value creation for future generations' },
-    { icon: Users, title: 'Trust', description: 'Building lasting relationships with stakeholders' },
-  ];
-
   const missions = [
     'Invest only in halal and ethical sectors',
     'Build world-class hotels and infrastructure',
@@ -19,72 +11,72 @@ const About = () => {
     'Create sustainable, long-lasting businesses',
   ];
 
+  const values = ['Independence', 'Integrity', 'Quality', 'Sustainability', 'Trust'];
+
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="pt-32 pb-24 lg:pt-40 lg:pb-32 bg-cream-gradient">
+      {/* Hero */}
+      <section className="pt-36 pb-28 lg:pt-44 lg:pb-36">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block text-xs font-medium tracking-[0.3em] uppercase text-accent mb-6 animate-fade-up">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-[11px] tracking-[0.4em] uppercase text-muted-foreground mb-8 animate-fade-up">
               About Us
-            </span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-8 animate-fade-up animate-delay-100">
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-foreground leading-[1.15] animate-fade-up animate-delay-100">
               Who We Are
             </h1>
             <GoldDivider className="my-10 animate-fade-up animate-delay-200" />
-            <p className="text-xl text-muted-foreground leading-relaxed animate-fade-up animate-delay-300">
-              ARA Group of Companies is a self-reliant international conglomerate, 
-              operating across multiple sectors through its wholly owned subsidiaries.
+            <p className="text-base text-muted-foreground leading-[1.8] animate-fade-up animate-delay-300">
+              A self-reliant international conglomerate, operating across multiple sectors 
+              through wholly owned subsidiaries.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Independence Statement */}
-      <section className="py-24 lg:py-32 bg-background">
+      {/* Statement */}
+      <section className="py-28 lg:py-36 border-t border-border">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed animate-fade-up">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-lg md:text-xl text-muted-foreground leading-[1.8] animate-fade-up">
               All projects, developments, and expansions are financed and controlled solely 
-              by ARA Group, ensuring <span className="text-foreground font-medium">full independence</span>, 
-              <span className="text-foreground font-medium"> transparency</span>, and 
-              <span className="text-foreground font-medium"> quality control</span>.
+              by ARA Group — ensuring full <em className="text-foreground not-italic font-medium">independence</em>, 
+              <em className="text-foreground not-italic font-medium"> transparency</em>, and 
+              <em className="text-foreground not-italic font-medium"> quality control</em>.
             </p>
           </div>
         </div>
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-28 lg:py-36 bg-secondary">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-            {/* Vision */}
-            <div className="animate-fade-up">
-              <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
-                Our Vision
-              </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-8">
+          <div className="grid lg:grid-cols-2 gap-px bg-border max-w-5xl mx-auto">
+            <div className="bg-secondary p-12 lg:p-16 animate-fade-up">
+              <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground mb-5">
+                Vision
+              </p>
+              <h2 className="font-serif text-2xl md:text-3xl font-normal text-foreground mb-6">
                 Global Excellence
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-[1.8]">
                 To become a globally respected, self-funded halal business group, 
                 known for excellence in development and long-term value creation.
               </p>
             </div>
 
-            {/* Mission */}
-            <div className="animate-fade-up animate-delay-200">
-              <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
-                Our Mission
-              </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-8">
+            <div className="bg-secondary p-12 lg:p-16 animate-fade-up animate-delay-200">
+              <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground mb-5">
+                Mission
+              </p>
+              <h2 className="font-serif text-2xl md:text-3xl font-normal text-foreground mb-6">
                 Purposeful Growth
               </h2>
               <ul className="space-y-4">
                 {missions.map((mission, index) => (
                   <li key={index} className="flex items-start gap-4">
-                    <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2.5 flex-shrink-0" />
-                    <span className="text-lg text-muted-foreground">{mission}</span>
+                    <span className="w-1 h-1 bg-accent rounded-full mt-2.5 flex-shrink-0" />
+                    <span className="text-base text-muted-foreground">{mission}</span>
                   </li>
                 ))}
               </ul>
@@ -94,59 +86,57 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-28 lg:py-36">
         <div className="container mx-auto px-6 lg:px-8">
-          <SectionTitle
-            subtitle="Leadership"
-            title="Guiding Our Vision"
-          />
-          
-          <div className="mt-16 max-w-2xl mx-auto">
-            <div className="text-center p-12 border border-border/50 bg-card animate-fade-up animate-delay-300">
-              <div className="w-24 h-24 bg-secondary rounded-full mx-auto mb-8 flex items-center justify-center">
-                <span className="font-serif text-3xl font-semibold text-accent">ARA</span>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+              <div className="animate-fade-up">
+                <img
+                  src={chairmanImage}
+                  alt="Abdul Rahman Auf — Chairman & CEO"
+                  className="w-full aspect-[3/4] object-cover object-top grayscale"
+                />
               </div>
-              <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-accent mb-3">
-                Chairman & CEO
-              </span>
-              <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-6">
-                Abdul Rahman Auf
-              </h3>
-              <p className="text-muted-foreground leading-relaxed max-w-lg mx-auto">
-                Founder and leader of ARA Group, driving the company with a clear vision 
-                of independent growth, ethical responsibility, and global expansion.
-              </p>
+              <div className="animate-fade-up animate-delay-200">
+                <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground mb-4">
+                  Chairman & CEO
+                </p>
+                <h3 className="font-serif text-3xl md:text-4xl font-normal text-foreground mb-8">
+                  Abdul Rahman Auf
+                </h3>
+                <div className="w-8 h-px bg-accent mb-8" />
+                <p className="text-base text-muted-foreground leading-[1.8]">
+                  Founder and leader of ARA Group, driving the company with a clear vision 
+                  of independent growth, ethical responsibility, and global expansion.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-24 lg:py-32 bg-primary text-primary-foreground">
+      {/* Values */}
+      <section className="py-28 lg:py-36 bg-foreground text-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4 animate-fade-up">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[11px] tracking-[0.25em] uppercase text-background/50 mb-6 animate-fade-up">
               Our Foundation
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold animate-fade-up animate-delay-100">
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-normal mb-16 animate-fade-up animate-delay-100">
               Core Values
             </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-                className="text-center p-6 border border-primary-foreground/10 hover:border-accent/30 transition-colors duration-300 animate-fade-up"
-                style={{ animationDelay: `${(index + 2) * 0.1}s` }}
-              >
-                <div className="w-12 h-12 bg-accent/10 rounded mx-auto mb-5 flex items-center justify-center">
-                  <value.icon className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="font-serif text-lg font-semibold mb-2">{value.title}</h3>
-                <p className="text-sm text-primary-foreground/60">{value.description}</p>
-              </div>
-            ))}
+            
+            <div className="flex flex-wrap justify-center gap-6">
+              {values.map((value, index) => (
+                <span
+                  key={value}
+                  className="text-sm tracking-[0.15em] uppercase text-background/70 animate-fade-up"
+                  style={{ animationDelay: `${(index + 2) * 0.1}s` }}
+                >
+                  {value}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
