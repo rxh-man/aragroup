@@ -16,11 +16,11 @@ const SectionTitle = ({
   return (
     <div className={`${align === 'center' ? 'text-center' : 'text-left'} ${className}`}>
       {subtitle && (
-        <span className="inline-block text-[11px] tracking-[0.25em] uppercase text-muted-foreground mb-6 animate-fade-up">
+        <span className="inline-block text-[11px] tracking-[0.3em] uppercase text-accent mb-5 animate-fade-up">
           {subtitle}
         </span>
       )}
-      <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-tight animate-fade-up animate-delay-100">
+      <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] text-foreground leading-tight animate-fade-up animate-delay-100">
         {title}
       </h2>
       {description && (
